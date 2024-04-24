@@ -1,3 +1,3 @@
 # DinossaurProject
 
-This project consist of building a website for people ja like dinossaur and wish to read more about their favourite dinossaurs and more.
+This project consists of building a website for people who like dinosaurs and wish to read more about their favorite dinosaurs and more.
