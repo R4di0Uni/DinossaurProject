@@ -19,7 +19,7 @@
             </li>
             <li>
                 <a href="/Dinosaurs" target="_top">
-                    <button class="nav-button">Dinossaurs</button>
+                    <button class="nav-button">Dinosaurs</button>
                 </a>
             </li>
             <li>
@@ -27,13 +27,24 @@
                     <button class="nav-button">News</button>
                 </a>
             </li>
-            <li id="login-button">
-                <a href="/Login" target="_top">
-                    <button class="nav-button">Login</button>
-                </a>
-            </li>
+            <% if (userAuthenticated) { %>
+                <li class="login-button">
+                    <button class="nav-button">Profile</button>
+                    <!-- Optionally, include a dropdown menu for profile actions -->
+                    
+                </li>
+                <% } else { %>
+                <li class="login-button">
+                    <a href="/Login" target="_top">
+                        <button class="nav-button">Login</button>
+                    </a>
+                </li>
+                <% } %>
         </ul>
+        
     </nav>
+</body>
+
 </body>
 
 </html>

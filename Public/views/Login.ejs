@@ -15,20 +15,25 @@
             <img src="/images/DinossaurLogin.svg" alt="Logo" class="left-login-image">
         </div>
         <div class="right-login">
-            <div class="card-login">
+            <form class="card-login" action="/Login" method="post">
+                <% if (message) { %>
+                <div class="alert alert-danger" style="background-color: red; width: 20vw; text-align: center;">
+                    <strong><%= message %></strong>
+                </div>
+                <% } %>
                 <h1>LOGIN</h1>
                 <div class="textfield">
-                    <label for="Username">Username</label>
-                    <input type="text" name="Username" placeholder="Username">
+                    <label for="Username">E-mail</label>
+                    <input type="text" name="email" placeholder="Email">
                 </div>
                 <div class="textfield">
                     <label for="Password">Password</label>
                     <input type="password" name="password" placeholder="Password">
                     <a href="#">Forgot Password?</a>
                 </div>
-                <button class="btn-login">Login</button>
+                <button class="btn-login" type="submit">Login</button>
                 <p>Don't have an account? <span><a id="register" href="/Register">Register now!</a></span></p>
-            </div>
+            </form>
         </div>
     </div>
 </body>
