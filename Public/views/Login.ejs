@@ -29,13 +29,28 @@
                 <div class="textfield">
                     <label for="Password">Password</label>
                     <input type="password" name="password" placeholder="Password">
-                    <a href="#">Forgot Password?</a>
+                    <a href="/forgot-password" id="forgot-password-link">Forgot Password?</a>
                 </div>
                 <button class="btn-login" type="submit">Login</button>
                 <p>Don't have an account? <span><a id="register" href="/Register">Register now!</a></span></p>
             </form>
         </div>
     </div>
+
+    <!-- Forgot Password Modal -->
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Reset Password</h2>
+            <form id="forgot-password-form" action="/forgot-password" method="post">
+                <label for="email">Enter your email address:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
 </body>
 
 </html>

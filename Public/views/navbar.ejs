@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Page Title</title>
     <link rel="stylesheet" href="/css/style.css">
-    </style>
+
 </head>
 
 <body id="nav-body">
@@ -28,23 +28,23 @@
                 </a>
             </li>
             <% if (userAuthenticated) { %>
-                <li class="login-button">
-                    <button class="nav-button">Profile</button>
-                    <!-- Optionally, include a dropdown menu for profile actions -->
-                    
+                <li class="login-button dropdown">
+                    <button class="nav-button dropbtn">Profile</button>
+                    <div class="dropdown-content">
+                        <a href="/Profile">View Profile</a>
+                        <a href="/Logout">Logout</a>
+                    </div>
                 </li>
-                <% } else { %>
+            <% } else { %>
                 <li class="login-button">
                     <a href="/Login" target="_top">
                         <button class="nav-button">Login</button>
                     </a>
                 </li>
-                <% } %>
+            <% } %>
         </ul>
-        
     </nav>
-</body>
-
+   
 </body>
 
 </html>
